@@ -37,8 +37,8 @@ Dans le body :
 "email":"florian.bord@epitech.eu"}`
 
 Trois retour possible:
-	- 404 en cas d'erruer, avec un message specifique 
-	- 200 pour ok
+- 404 en cas d'erruer, avec un message specifique 
+- 200 pour ok
 
 
 Vérifier que le compte existe dans la BD
