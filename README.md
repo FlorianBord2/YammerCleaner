@@ -16,10 +16,9 @@ Tout les retours sont un json :
 
 `
 [{
-    "code": "1"          # valeur de retour
+    "code": "1",
     "data": [
         "msg": "error"
-        # données retourner selon api request
     ]
 }]
 `
