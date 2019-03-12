@@ -55,9 +55,9 @@ Dans le body :
 Le token est retourner dans _data_ avec la clé _token_.
 
 Deux retour possible:
-	- 200 pour ok.
-	- 401 si l'utilisateur n'existe pas.
-	- 404 en cas d'erreur.
+- 200 pour ok.
+- 401 si l'utilisateur n'existe pas.
+- 404 en cas d'erreur.
 
 
 Ajouter un service
@@ -78,9 +78,9 @@ Dans le body : `{"action":"Nom de l'action",
 				"name":"Nom donner au service"}`
 
 Deux retour possible:
-	- 200 		si tout c'est bien passer
-	- 401		si la connection a echouer ( mauvais username password)
-	- 404 		en cas d'erruer
+- 200 		si tout c'est bien passer
+- 401		si la connection a echouer ( mauvais username password)
+- 404 		en cas d'erruer
 
 Retirer un service
 ---------
@@ -96,9 +96,9 @@ exemple : 'Authorization : EQ4b60fb_AuewuYCpK6SPA'
 Dans le body : `{"name": "Service1"}`
 
 Trois retour possible:
-	- 200		pour ok
-	- 404		si le service n'existe pas
-	- 401		si la connection a echouer ( mauvais username password)
+- 200		pour ok
+- 404		si le service n'existe pas
+- 401		si la connection a echouer ( mauvais username password)
 
 
 Avoir la liste des services d'un utilisateur, et sont etat ( activer / desactiver)
@@ -118,9 +118,9 @@ exemple pour 4 service nommé 'serv1', 'serv2', 'serv3', 'serv4' :
 	`[{"name":"serv1","state":true},{"name":"serv2","state":true},{"name":"serv3","state":true},{"name":"serv4","state":true}]`
 
 Trois retour possible:
-	- 200		pour ok
-	- 404		(pas de service pour c'est utilisateur)
-	- 401		probléme de connection
+- 200		pour ok
+- 404		(pas de service pour c'est utilisateur)
+- 401		probléme de connection
 
 
 Changer le state d'un service, si il est true il passe a false et vis versa
@@ -137,6 +137,6 @@ exemple : 'Authorization : EQ4b60fb_AuewuYCpK6SPA'
 Dans le body : {"name":"Nom du service"}
 
 Trois retour possible:
-	- 200		pour ok
-	- 404	si le service n'existe pas
-	- 401	si le token est mauvais
+- 200		pour ok
+- 404	si le service n'existe pas
+- 401	si le token est mauvais
