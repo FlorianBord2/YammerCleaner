@@ -12,7 +12,7 @@ Nous avons utiliser le framework open-source python _Flask_.
 
 L'API comporte 9 requete : 5 POST, 3 GET et 1 DELETE
 
-Tout les retours sont un json
+Tout les retours sont un json :
 
 `
 [{
@@ -23,7 +23,6 @@ Tout les retours sont un json
     ]
 }]
 `
--------------------------------------------------------------------------------------
 
 Crée un nouveaux compte
 ------------
