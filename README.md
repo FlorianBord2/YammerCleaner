@@ -13,7 +13,7 @@ Nous avons utiliser le framework open-source python _Flask_.
 L'API comporte 9 requete : 5 POST, 3 GET et 1 DELETE
 
 Tout les retours sont un json
-
+`
 [{
     "code": "1"          # valeur de retour
     "data": [
@@ -21,25 +21,24 @@ Tout les retours sont un json
         # données retourner selon api request
     ]
 }]
-
+`
 -------------------------------------------------------------------------------------
 
-crée un nouveaux compte
+Crée un nouveaux compte
+------------
 
 POST	:	http://127.0.0.1:5000/api/users
 
 http://127.0.0.1:5000       URL
 /api/users				route
 
-Dans le body : {"username":"florianles@oui.crom",
-				"password":"zefqldkqk",
-				"email":"florian.bord@epitech.eu"}
+Dans le body : 
+`{"username":"florianles@oui.crom",
+"password":"zefqldkqk",
+"email":"florian.bord@epitech.eu"}`
 
-
-Trois retour possible # on peut remplacer par des valuer en int si vous preférer
-	- -1 pour name already use
-	- -2 pour password or username or email is empty
-	- -3 pour mail invalide
+Trois retour possible:
+	- 404 en cas d'erruer, avec un message specifique 
 	- 200 pour ok
 
 -------------------------------------------------------------------------------------
