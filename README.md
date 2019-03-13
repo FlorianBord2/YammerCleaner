@@ -10,7 +10,7 @@ Documentation de l'API du projet de AREA
 Le langage utiliser pour la creation de cette _api_ est _Python3_.
 Nous avons utiliser le framework open-source python _Flask_.
 
-L'API comporte 9 requete : 5 POST, 3 GET et 1 DELETE
+L'API comporte 10 requete : 6 POST, 3 GET et 1 DELETE
 
 Vous pouvez accédez a toute ces requete dans Postman en important la collection associer a ce lien :
 https://www.getpostman.com/collections/6e9b4d5e32d2c0c00fbe
@@ -148,7 +148,7 @@ Trois retour possible:
 - 404	si le service n'existe pas
 - 401	si le token est mauvais
 
-Récupere la liste des action disponible
+Récupere la liste des reaction disponible
 -------------
 
 GET	:	http://127.0.0.1:5000/reaction_list
@@ -158,4 +158,55 @@ reaction_list/				route
 
 Retourne la liste des action avec leurs description.
 Exemple:
-`{"code":"200","data":{"post_yt":{"desc":"L\u2019utilisateur poste un commentaire sur une vid\u00e9o Youtube. Param\u00e8tres : ID de la chaine, ID de la video, commentaire qu\u2019il souhaite poster"},"send_mail":{"desc":"L\u2019utilisateur re\u00e7oit un mail avec le contenu qu\u2019il passe en param\u00e8tre"}}}`
+`{"code":"200","data":{"send_mail":{"desc":"L\u2019utilisateur re\u00e7oit un mail avec le contenu qu\u2019il passe en param\u00e8tre"}}}`
+
+
+Récupere la liste des action disponible
+-------------
+
+GET	:	http://127.0.0.1:5000/action_list
+
+http://127.0.0.1:5000/			URL
+action_list/				route
+
+Retourne la liste des action avec leurs description.
+Exemple:
+`{"code":"200","data":"fb_birthday":{"desc":"Regarde si la date d\u2019anniversaire Facebook est celle d\u2019aujourd\u2019hui."}}}`
+
+Ajouter un token special
+-------------------
+
+POST	:	http://127.0.0.1:5000/add_token
+
+http://127.0.0.1:5000/			URL
+add_token				route
+
+Dans le header : 'Authorization : $token'
+exemple : 'Authorization : EQ4b60fb_AuewuYCpK6SPA'
+
+Dans lee body : `{"token":"qdqdzjdjqkfkq", "name":"facebook"}`
+
+Trois retour possible:
+- 200		pour ok
+- 404		en cas d'erruer
+- 401		si la connection échoue
+
+Récupérer un token special
+----------
+
+POST	:	http://127.0.0.1:5000/get_token
+
+http://127.0.0.1:5000/			URL
+get_token				route
+
+
+Dans le header : 'Authorization : $token'
+exemple : 'Authorization : EQ4b60fb_AuewuYCpK6SPA'
+
+Dans le body : `{"name":"facebook"}`
+
+Retour possible:
+- 200		pour ok
+- 404		en cas d'erruer
+- 401		si la connection échoue
+`
