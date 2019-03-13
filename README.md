@@ -135,7 +135,7 @@ Changer le state d'un service, si il est true il passe a false et vis versa
 
 POST	:	http://127.0.0.1:5000/change_state/
 
-http://127.0.0.1:5000/		URL
+http://127.0.0.1:5000/			URL
 change_state/				route
 
 Dans le header : 'Authorization : $token'
@@ -147,3 +147,15 @@ Trois retour possible:
 - 200		pour ok
 - 404	si le service n'existe pas
 - 401	si le token est mauvais
+
+Récupere la liste des action disponible
+-------------
+
+GET	:	http://127.0.0.1:5000/reaction_list
+
+http://127.0.0.1:5000/			URL
+reaction_list/				route
+
+Retourne la liste des action avec leurs description.
+Exemple:
+`{"code":"200","data":{"post_yt":{"desc":"L\u2019utilisateur poste un commentaire sur une vid\u00e9o Youtube. Param\u00e8tres : ID de la chaine, ID de la video, commentaire qu\u2019il souhaite poster"},"send_mail":{"desc":"L\u2019utilisateur re\u00e7oit un mail avec le contenu qu\u2019il passe en param\u00e8tre"}}}`
