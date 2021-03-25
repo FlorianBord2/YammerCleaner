@@ -64,7 +64,7 @@ pyOpenSSL==17.2.0
 pyparsing==2.2.0
 PyPDF2==1.26.0
 PySocks==1.6.7
-PyYAML==3.13
+PyYAML==5.4
 queuelib==1.5.0
 requests==2.20.0
 rpm==4.14.2.1
