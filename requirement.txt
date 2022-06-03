@@ -5,7 +5,7 @@ attrs==18.2.0
 Automat==0.7.0
 backports.functools-lru-cache==1.5
 backports.ssl-match-hostname==3.5.0.1
-bottle==0.12.13
+bottle==0.12.20
 cffi==1.10.0
 chardet==3.0.4
 Click==7.0
