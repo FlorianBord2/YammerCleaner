@@ -68,7 +68,7 @@ PyYAML==3.13
 queuelib==1.5.0
 requests==2.20.0
 rpm==4.14.2.1
-Scrapy==1.5.1
+Scrapy==2.6.1
 selenium==3.141.0
 service-identity==17.0.0
 setproctitle==1.1.10
